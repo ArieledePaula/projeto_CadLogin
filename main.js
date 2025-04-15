@@ -10,3 +10,14 @@ function acessar(){
        window.location.href = "cadastro.html";
     }
 }
+
+// Criando variável do tipo array - vazio
+var dadosLista = [];
+
+function salvarUser(){
+    let nomeUser = document.getElementById('nomeUser').value;
+
+    if(nomeUser){
+        dadosLista.push(nomeUser);
+    }
+}
