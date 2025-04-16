@@ -20,6 +20,18 @@ function salvarUser(){
     if(nomeUser){
         dadosLista.push(nomeUser);
         console.log(dadosLista);
+        criaLista();
         document.getElementById('nomeUser').value = "";
+    }else{
+        alert("Favor informar um nome para cadastro")
+    }
+}
+
+//Função para preencher a lista de cadastro
+function criaLista(){
+    let tabela = "<tr><td>Nome</td><td>Ações</td></tr>";
+    for(let i =0;i<=(dadosLista.length-1); i++){
+        tabela += "<tr><td>" + dadosLista[i] + "</td><td><button class='btn btn-dark'>Editar</button><button class='btn btn-danger'>Excluir</button></td></tr>";
+        document.getElementById('tabela').innerHTML = tabela;
     }
 }
