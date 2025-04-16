@@ -38,13 +38,13 @@ function criaLista(){
 
 //Função para excluir nome da lista
 function excluir(i){
-    dadosLista.splice((i-1),1);
+    dadosLista.splice((i - 1), 1);
     document.getElementById('tabela').deleteRow(i);
-    console.log(i);
+   
 }
 
 //Função para edição de nome da lista
 function editar(i){
     document.getElementById('nomeUser').value = dadosLista[(i - 1)];
-    dadosLista.splice(dadosLista[(i - 1), 1]);
+    dadosLista.splice((i - 1), 1);
 }
